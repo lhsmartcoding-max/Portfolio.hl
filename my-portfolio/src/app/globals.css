@@ -1,26 +1,120 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Base resets for clean minimalism */
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #9eccfa; /* Light gray for light mode */
+  color: #111827;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main 
+  {
+  background-image: url('/hero-bg.jpg'); /* path is relative to public */
+  background-size: cover;       /* makes image cover the entire container */
+  background-position: center;  /* centers the image */
+  background-repeat: no-repeat; /* prevents tiling */
+}
+
+
+.dark body {
+  background-color: #111827; /* Dark gray for dark mode */
+  color: #F9FAFB;
+}
+
+/* Custom utilities inspired by sites - using plain CSS */
+.gradient-bg {
+  background-image: linear-gradient(to bottom right, #F9FAFB, #FFFFFF);
+}
+
+.dark .gradient-bg {
+  background-image: linear-gradient(to bottom right, #1F2937, #111827);
+}
+
+.shadow-soft {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  border-radius: 1rem;
+  transition-property: box-shadow;
+  transition-duration: 300ms;
+}
+
+.shadow-soft:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.hover-scale {
+  transition-property: transform;
+  transition-duration: 300ms;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+.section-padding {
+  padding-top: 4rem; /* py-16 */
+  padding-bottom: 4rem;
+  padding-left: 1rem; /* px-4 */
+  padding-right: 1rem;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding-left: 2rem; /* md:px-8 */
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-padding {
+    padding-left: 4rem; /* lg:px-16 */
+    padding-right: 4rem;
+  }
+}
+
+.hero-text {
+  font-size: 1.875rem; /* text-5xl */
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .hero-text {
+    font-size: 3.75rem; /* md:text-6xl */
+  }
+}
+
+.body-text {
+  font-size: 1.125rem; /* text-lg */
+  line-height: 1.625;
+  color: #374151;
+}
+
+.dark .body-text {
+  color: #D1D5DB;
+}
+
+/* Button styles for gorgeous CTAs */
+.btn-primary {
+  background-color: #10B981; /* Emerald green for a fresh, modern accent */
+  color: #FFFFFF;
+  padding-left: 2rem; /* px-8 */
+  padding-right: 2rem;
+  padding-top: 1rem; /* py-4 */
+  padding-bottom: 1rem;
+  border-radius: 9999px; /* rounded-full */
+  font-weight: 600;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition-property: all;
+  transition-duration: 300ms;
+}
+
+.btn-primary:hover {
+  background-color: #059669; /* Darker emerald for hover */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
