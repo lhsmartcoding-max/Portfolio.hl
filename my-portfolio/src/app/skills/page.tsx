@@ -11,7 +11,10 @@ export default function Skills() {
   ];
 
   return (
-    <section className="max-w-7xl mx-auto gradient-bg section-padding grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 min-h-[calc(100vh-12rem)]">
+    <section
+      className="max-w-4xl mx-auto bg-white/30 dark:bg-gray-900/30 backdrop-blur-md rounded-2xl shadow-lg p-8 mt-12 mb-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"
+      style={{ minHeight: 'calc(100vh - 19rem)' }} // leaves space for footer
+    >
       {skills.map((skill, index) => (
         <div key={index} className="text-center p-6 bg-white dark:bg-gray-800 shadow-soft hover-scale flex flex-col items-center">
           {skill.icon}

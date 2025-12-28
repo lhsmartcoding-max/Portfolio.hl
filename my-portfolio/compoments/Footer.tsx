@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="bg-gray-100 py-8 text-center text-[--color-secondary] dark:bg-gray-800">
+    <footer className="bg-[#e4d1cd] py-8 text-center text-[--color-secondary] dark:bg-gray-800">
       <div className="max-w-7xl mx-auto px-4">
         <p>&copy; 2026 Hakimi Luqman. All rights reserved.</p>
         <ul className="flex justify-center space-x-6 mt-4">

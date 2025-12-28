@@ -13,7 +13,8 @@ export default function Contact() {
   };
 
   return (
-    <section className="max-w-lg mx-auto gradient-bg section-padding min-h-[calc(100vh-12rem)] flex flex-col justify-center">
+    <section className="max-w-lg mx-auto bg-white/30 dark:bg-gray-900/30 backdrop-blur-md rounded-2xl shadow-lg p-8 mt-12 mb-12"
+      style={{ minHeight: 'calc(100vh - 19rem)' }}>
       <h2 className="text-4xl font-bold mb-8 text-[--color-primary] dark:text-blue-300">お問い合わせ</h2>
       <form onSubmit={handleSubmit} className="space-y-6">
         <input
